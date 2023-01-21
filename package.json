@@ -2,7 +2,10 @@
   "name": "fake-store-test",
   "version": "1.0.0",
   "description": "take home test",
-  "source": "src/index.html",
+  "source": [
+    "src/index.html",
+    "src/about.html"
+  ],
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "dev": "parcel",

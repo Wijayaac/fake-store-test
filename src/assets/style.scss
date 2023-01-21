@@ -1,10 +1,19 @@
 // Vendor override
 @import 'vendor/override';
 
+// Utils
+@import 'utils/variables';
+@import 'fonts/Montserrat/stylesheet.css';
+
 // vendors
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
 @import 'vendor/mq';
 
+// Reboot
+@import 'utils/reboot';
+
+// Components
+@import 'components/header';
 
 
 .container {

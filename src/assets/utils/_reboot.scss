@@ -1,0 +1,19 @@
+button {
+    background-color: $primary;
+    outline: none;
+    border: none;
+
+    &:active,
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+
+a {
+    color: #0d9488;
+}
+
+body {
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
