@@ -1,11 +1,8 @@
 button,
 .btn {
-    -webkit-appearance: none;
     appearance: none;
-    border-radius: 0;
     outline: none;
     background: none;
-    text-align: inherit;
     font-size: 14px;
     display: inline-flex;
     align-items: center;
@@ -15,7 +12,6 @@ button,
     transition: $transition-button;
     text-decoration: none;
     cursor: pointer;
-    font-family: Montserrat, Helvetica, Arial, sans-serif;
     font-weight: 700;
     text-align: center;
     line-height: 1.2;
