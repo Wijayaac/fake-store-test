@@ -1,0 +1,19 @@
+// Colors
+$primary: #00e043;
+$dark-green: #01554a;
+$light-green: #eafbed;
+$secondary: #3062f3;
+$black: #18181b;
+$grey: #71717a;
+
+$theme-colors: (
+    "primary": $primary,
+    "black": $black,
+    "grey": $grey,
+    "secondary": $secondary
+);
+
+// Transition
+$transition-default: all 400ms, 400ms ease;
+$transition-button: all .25s cubic-bezier(0, 0, .21, .9);
+$transition-effect-cubic: .25s cubic-bezier(0, 0, .21, .9);

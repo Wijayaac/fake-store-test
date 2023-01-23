@@ -1,0 +1,142 @@
+.footer {
+    h2 {
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__wrapper {
+        max-width: 1440px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq($until: lg) {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+
+    &__top,
+    &__middle,
+    &__bottom {
+        position: relative;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            opacity: 0.1;
+            background-color: $dark-green;
+        }
+    }
+
+    &__top {
+        .footer__wrapper-box {
+            align-items: center;
+        }
+
+        &-item {
+            margin-right: 30px;
+        }
+    }
+
+    &__contact {
+        li {
+            align-items: flex-start;
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+
+        i {
+            font-size: 20px;
+        }
+
+        a {
+            color: $grey;
+        }
+    }
+
+    &__social {
+        a {
+            border-radius: 50px;
+            width: 45px;
+            height: 45px;
+            border: 1px solid #f4f4f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        i {
+            font-size: 24px;
+        }
+    }
+
+    &__middle {
+        h3 {
+            margin-bottom: 16px;
+
+        }
+
+        a {
+            color: $black;
+        }
+    }
+
+    &__bottom {
+        .footer__wrapper-box {
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        &-item {
+            color: $grey;
+
+            p {
+                margin-bottom: 0;
+                font-size: 12px;
+            }
+
+            a,
+            span {
+                font-size: 14px;
+                color: inherit;
+            }
+
+            .logo {
+                display: inline-flex;
+                align-items: center;
+                margin-top: 4px;
+
+                i {
+                    font-size: 32px;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

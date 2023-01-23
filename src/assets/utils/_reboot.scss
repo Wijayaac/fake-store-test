@@ -1,0 +1,45 @@
+button,
+.btn {
+    appearance: none;
+    outline: none;
+    background: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50px;
+    transition: $transition-button;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    will-change: transform, border-color, background-color, color;
+    padding: 12px 26px 14px;
+    position: relative;
+
+    &:active,
+    &:focus {
+        outline: none;
+        border: none;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+a {
+    color: #0d9488;
+}
+
+body {
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
+
+p {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

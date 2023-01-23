@@ -1,18 +1,148 @@
 // Vendor override
 @import 'vendor/override';
 
+// Utils
+@import 'utils/variables';
+@import 'fonts/Montserrat/stylesheet.css';
+@import 'fonts/Icon/style.css';
+
 // vendors
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
 @import 'vendor/mq';
 
+// Reboot
+@import 'utils/reboot';
 
+// Components
+@import 'components/header';
+@import 'components/footer';
+@import 'components/banner';
+@import 'components/text-media';
+@import 'components/accordion';
+@import 'components/partner';
+@import 'components/card-icon';
+@import 'components/contact-form';
+@import 'components/faq-shortcut';
+@import 'components/cta';
+
+.sr-only {
+    border: 0;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    float: left;
+}
 
 .container {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    @include mq($from: 1440px) {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 
     @include mq($until: lg) {
         padding-left: 25px;
         padding-right: 25px;
+    }
+}
+
+.btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+    padding: 16px 34px 18px;
+    font-size: 15px;
+}
+
+.btn-secondary {
+    border-color: $dark-green;
+    color: $dark-green;
+}
+
+.subheading {
+    font-size: 22px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: $grey;
+    margin-bottom: 4px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+
+    span {
+        color: $primary
+    }
+}
+
+// Typography
+h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+
+    @include mq($from: md) {
+        font-size: 48px;
+        margin-bottom: 24px;
+    }
+
+    @include mq($from: xl) {
+        font-size: 58px;
+        margin-bottom: 40px;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+
+    @include mq($from: md) {
+        font-size: 31px;
+    }
+
+    @include mq($from: xl) {
+        font-size: 38px;
+    }
+}
+
+h3 {
+    font-size: 20px;
+
+    @include mq($from: md) {
+        font-size: 23px;
+    }
+
+    @include mq($from: xl) {
+        font-size: 26px;
+    }
+}
+
+
+.image-wrapper {
+    overflow: hidden;
+
+    img {
+        border-radius: 32px;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.section {
+    padding-bottom: 80px;
+    padding-top: 80px;
+
+    &--tight {
+        padding-top: 0;
     }
 }

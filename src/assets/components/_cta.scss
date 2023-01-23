@@ -1,0 +1,11 @@
+.cta {
+    background-color: $dark-green;
+    color: $white;
+    text-align: center;
+
+    &__wrapper {
+        .row {
+            justify-content: center;
+        }
+    }
+}

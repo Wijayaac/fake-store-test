@@ -1,0 +1,33 @@
+.accordion {
+    &__header {
+        text-align: center;
+        max-width: 860px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+    }
+
+    button {
+        &:hover {
+            transform: none;
+        }
+    }
+
+    &-item {
+        --bs-accordion-border-width: 2px;
+        --bs-accordion-border-color: #e4e4e7;
+        --bs-accordion-border-radius: 12px;
+
+        border-radius: var(--bs-accordion-border-radius);
+        background-color: $white;
+        overflow: hidden;
+
+        &:not(:first-of-type) {
+            border-top: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+}
