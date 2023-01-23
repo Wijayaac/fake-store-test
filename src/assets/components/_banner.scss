@@ -1,0 +1,32 @@
+.banner {
+    &--normal {
+        background-color: #eafbed;
+    }
+
+    &--plain {
+        background-image: linear-gradient(#f4f4f5, $white);
+        text-align: center;
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        .subheading {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__wrapper {
+        .banner--normal & {
+            .row {
+                align-items: center;
+            }
+        }
+
+        .banner--plain & {
+            .row {
+                justify-content: center;
+            }
+        }
+    }
+}

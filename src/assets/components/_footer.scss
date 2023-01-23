@@ -22,6 +22,26 @@
         }
     }
 
+    &__top,
+    &__middle,
+    &__bottom {
+        position: relative;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            opacity: 0.1;
+            background-color: $dark-green;
+        }
+    }
+
     &__top {
         .footer__wrapper-box {
             align-items: center;
@@ -67,22 +87,6 @@
     }
 
     &__middle {
-        position: relative;
-        margin-top: 40px;
-        padding-top: 40px;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 1px;
-            opacity: 0.1;
-            background-color: $dark-green;
-        }
-
         h3 {
             margin-bottom: 16px;
 
@@ -94,22 +98,6 @@
     }
 
     &__bottom {
-        position: relative;
-        margin-top: 20px;
-        padding-top: 10px;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 1px;
-            opacity: 0.1;
-            background-color: $dark-green;
-        }
-
         .footer__wrapper-box {
             justify-content: space-between;
             align-items: flex-end;

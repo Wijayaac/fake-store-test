@@ -16,7 +16,14 @@
 // Components
 @import 'components/header';
 @import 'components/footer';
-
+@import 'components/banner';
+@import 'components/text-media';
+@import 'components/accordion';
+@import 'components/partner';
+@import 'components/card-icon';
+@import 'components/contact-form';
+@import 'components/faq-shortcut';
+@import 'components/cta';
 
 .sr-only {
     border: 0;
@@ -62,6 +69,80 @@
     font-size: 22px;
 }
 
-h2 {
+.subtitle {
+    font-size: 14px;
+    color: $grey;
+    margin-bottom: 4px;
+}
+
+h1,
+h2,
+h3 {
     font-weight: 700;
+
+    span {
+        color: $primary
+    }
+}
+
+// Typography
+h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+
+    @include mq($from: md) {
+        font-size: 48px;
+        margin-bottom: 24px;
+    }
+
+    @include mq($from: xl) {
+        font-size: 58px;
+        margin-bottom: 40px;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+
+    @include mq($from: md) {
+        font-size: 31px;
+    }
+
+    @include mq($from: xl) {
+        font-size: 38px;
+    }
+}
+
+h3 {
+    font-size: 20px;
+
+    @include mq($from: md) {
+        font-size: 23px;
+    }
+
+    @include mq($from: xl) {
+        font-size: 26px;
+    }
+}
+
+
+.image-wrapper {
+    overflow: hidden;
+
+    img {
+        border-radius: 32px;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.section {
+    padding-bottom: 80px;
+    padding-top: 80px;
+
+    &--tight {
+        padding-top: 0;
+    }
 }
