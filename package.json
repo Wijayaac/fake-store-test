@@ -6,7 +6,9 @@
     "src/index.html",
     "src/contact.html",
     "src/about.html",
-    "src/term.html"
+    "src/term.html",
+    "src/products.html",
+    "src/404.html"
   ],
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
