@@ -4,6 +4,12 @@
     &__wrapper {
         .row {
             align-items: center;
+
+            .text-media--slider & {
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+            }
         }
     }
 }

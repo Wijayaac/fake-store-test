@@ -24,6 +24,16 @@
 @import 'components/contact-form';
 @import 'components/faq-shortcut';
 @import 'components/cta';
+@import 'components/card';
+@import 'components/review-slider';
+@import 'components/step';
+@import 'components/proof';
+
+// Pages
+@import 'pages/contact';
+@import 'pages/text';
+@import 'pages/product';
+@import 'pages/error';
 
 .sr-only {
     border: 0;
@@ -56,6 +66,9 @@
 .btn-primary {
     background-color: $primary;
     border-color: $primary;
+}
+
+.btn-lead {
     padding: 16px 34px 18px;
     font-size: 15px;
 }
@@ -63,6 +76,31 @@
 .btn-secondary {
     border-color: $dark-green;
     color: $dark-green;
+}
+
+.btn-arrow {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: $dark-green;
+    padding-left: 0;
+
+    &::after {
+        content: "\e90b";
+        position: absolute;
+        right: 0;
+        color: $primary;
+        font-weight: 700;
+        font-size: 14px;
+        font-family: 'icomoon' !important;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 }
 
 .subheading {
