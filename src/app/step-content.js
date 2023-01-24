@@ -2,7 +2,7 @@ class ProgressContent {
   constructor() {
     this.wrapper = document.querySelectorAll(".step");
     this.DOM = [];
-    window.scrollTo(0, 0); // prevent progress bar not filled when page load.
+    //window.scrollTo(0, 0); // prevent progress bar not filled when page load.
   }
 
   init() {

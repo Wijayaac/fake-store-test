@@ -16,6 +16,17 @@
         }
     }
 
+    &--home {
+        background-color: $dark-green;
+        color: $white;
+        min-height: 700px;
+        height: 88vh;
+
+        .container {
+            height: 100%;
+        }
+    }
+
     &__wrapper {
         .banner--normal & {
             .row {
@@ -26,6 +37,33 @@
         .banner--plain & {
             .row {
                 justify-content: center;
+            }
+        }
+
+        .banner--home & {
+
+            &,
+            .row {
+                height: 100%;
+            }
+
+            .row {
+                align-items: center;
+            }
+        }
+    }
+
+
+    &__button {
+        .banner--home & {
+            margin-top: 24px;
+
+            .btn-lead {
+                margin-right: 20px;
+            }
+
+            .btn-arrow {
+                color: $white;
             }
         }
     }

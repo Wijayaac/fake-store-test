@@ -120,4 +120,10 @@
             font-size: inherit;
         }
     }
+
+    &__button {
+        .btn-lead {
+            margin-right: 20px;
+        }
+    }
 }

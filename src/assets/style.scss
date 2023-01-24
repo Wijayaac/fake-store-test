@@ -27,6 +27,7 @@
 @import 'components/card';
 @import 'components/review-slider';
 @import 'components/step';
+@import 'components/proof';
 
 // Pages
 @import 'pages/contact';
@@ -80,12 +81,14 @@
     position: relative;
     display: inline-flex;
     align-items: center;
+    color: $dark-green;
+    padding-left: 0;
 
     &::after {
         content: "\e90b";
         position: absolute;
         right: 0;
-        color: $dark-green;
+        color: $primary;
         font-weight: 700;
         font-size: 14px;
         font-family: 'icomoon' !important;
