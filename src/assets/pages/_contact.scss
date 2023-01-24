@@ -1,0 +1,14 @@
+.contact-page {
+    .map {
+        position: relative;
+        z-index: 10;
+        margin-bottom: -10px;
+
+        iframe {
+            width: 100%;
+            height: auto;
+            min-height: 450px;
+            max-height: 600px;
+        }
+    }
+}
