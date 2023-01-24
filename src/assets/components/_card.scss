@@ -1,0 +1,56 @@
+.card {
+    border-radius: 32px;
+    overflow: hidden;
+    background-color: $white;
+    color: $black;
+    box-shadow: 2px 6px 35px 10px rgb(24 24 27 / 9%);
+    border: none;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image {
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__description {
+        padding: 20px;
+
+        .card--review & {
+            padding: 32px;
+        }
+    }
+
+    &__text {
+        font-weight: 700;
+
+        &--title {
+            margin-bottom: 16px;
+        }
+
+        &--price {
+            color: $dark-green;
+        }
+    }
+
+    &__button {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+
+        button {
+            &:first-child {
+                margin-right: 12px;
+            }
+        }
+    }
+
+}

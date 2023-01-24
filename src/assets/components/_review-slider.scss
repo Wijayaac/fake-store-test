@@ -1,0 +1,12 @@
+.review-slider {
+    &__header {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        margin-bottom: 30px;
+    }
+}

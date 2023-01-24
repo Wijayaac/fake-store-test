@@ -1,0 +1,46 @@
+.product {
+    &__item {
+        margin-bottom: 48px;
+    }
+
+    &__rating {
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        i {
+            color: $yellow;
+        }
+
+        &--review {
+            margin-bottom: 24px;
+
+            li {
+                width: 48px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $dark-green;
+
+                &:not(:last-child) {
+                    margin-right: 4px;
+                }
+            }
+
+            i {
+                color: $white;
+                font-size: 40px;
+            }
+        }
+    }
+
+    &__button {
+        text-align: center;
+
+        button {
+            text-transform: uppercase;
+        }
+    }
+}
