@@ -105,7 +105,6 @@
             .internal-page &,
             &.btn-primary {
                 color: $black;
-
             }
 
             .active & {
@@ -114,11 +113,15 @@
 
             &:hover,
             &:focus {
-                color: $dark-green;
 
-                &::before {
-                    background-color: $dark-green;
-                    width: 100%;
+                .header-scroll &,
+                .internal-page & {
+                    color: $dark-green;
+
+                    &::before {
+                        background-color: $dark-green;
+                        width: 100%;
+                    }
                 }
             }
         }

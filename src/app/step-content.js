@@ -1,3 +1,5 @@
+import { PRODUCT_EVENT } from "./constant";
+
 class ProgressContent {
   constructor() {
     this.wrapper = document.querySelectorAll(".step");
@@ -22,10 +24,11 @@ class ProgressContent {
 
   setProgressCheckpoint(key) {
     this.wrapper[key].querySelectorAll(".step__item-order").forEach((year) => {
-      let topPos =
+      const topPos =
         year.getBoundingClientRect().top -
         document.querySelector(".header").offsetHeight -
         200;
+      year.classList.remove("active");
 
       window.addEventListener("scroll", () => {
         let scrollPos =
@@ -43,13 +46,15 @@ class ProgressContent {
   }
 
   setProgressBar(key) {
-    const progressHeight =
+    let progressHeight =
       this.wrapper[key].querySelector(".step__bar").offsetHeight;
-    const progressTopOffset =
+    let progressTopOffset =
       this.wrapper[key].querySelector(".step__bar").getBoundingClientRect()
         .top -
       document.querySelector(".header").offsetHeight -
       200;
+
+    this.wrapper[key].querySelector(".step__bar--current").style.height = `0px`;
 
     window.addEventListener("scroll", () => {
       let scrollPos =
@@ -104,6 +109,13 @@ class ProgressContent {
     });
   }
 }
+let progressContent;
+window.addEventListener("DOMContentLoaded", () => {
+  progressContent = new ProgressContent();
+  progressContent.init();
+});
 
-let progressContent = new ProgressContent();
-progressContent.init();
+window.addEventListener(PRODUCT_EVENT, () => {
+  progressContent = new ProgressContent();
+  progressContent.init();
+});

@@ -3,3 +3,4 @@ import "./header";
 import "./step-content";
 import "./review-slider";
 import "./category-slider";
+import "./products";
