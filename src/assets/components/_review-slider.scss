@@ -1,4 +1,72 @@
 .review-slider {
+    overflow: hidden;
+
+    &__wrapper {
+        position: relative;
+    }
+
+    .swiper {
+        overflow: visible;
+
+        &-slide {
+            transition: $transition-default;
+
+            &-prev,
+            & {
+                opacity: 0.3;
+            }
+
+            &-active,
+            &-next {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: -20%;
+        right: 0;
+        z-index: 10;
+    }
+
+    &__navigation {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &>div {
+            position: static;
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
+            border: 2px solid $dark-green;
+            transition: $transition-default;
+
+            &:hover {
+                background-color: $dark-green;
+
+                i {
+                    color: $primary;
+                }
+            }
+
+            &:first-child {
+                margin-right: 20px;
+            }
+
+            &::after {
+                content: none;
+            }
+
+            i {
+                font-size: 40px;
+                transition: $transition-default;
+                color: $dark-green;
+            }
+        }
+    }
+
     &__header {
         margin-bottom: 40px;
         display: flex;
