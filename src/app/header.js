@@ -11,3 +11,14 @@ navToggle.addEventListener("click", () => {
     navToggle.setAttribute("aria-expanded", false);
   }
 });
+
+document.addEventListener("scroll", () => {
+  let scrollBarPosition =
+    window.scrollY || window.pageYOffset || document.body.scrollTop;
+
+  if (scrollBarPosition >= 80) {
+    document.body.classList.add("header-scroll");
+  } else {
+    document.body.classList.remove("header-scroll");
+  }
+});

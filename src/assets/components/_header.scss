@@ -1,19 +1,34 @@
 .header {
-    background: $white;
+    background: $dark-green;
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
     z-index: 99;
-    border-bottom: 1px solid #f4f4f5;
+    transition: $transition-default;
+
+    .header-scroll & {
+        background: $white;
+        border-bottom: 1px solid #f4f4f5;
+    }
+
+    .internal-page & {
+        background: $white;
+        border-bottom: 1px solid #f4f4f5;
+    }
 
     &__logo {
         a {
             text-decoration: none;
-            color: $black; //change to white
+            color: $white;
             font-weight: 900;
             font-size: 32px;
+
+            .header-scroll &,
+            .internal-page & {
+                color: $black;
+            }
         }
     }
 
@@ -70,11 +85,41 @@
         }
 
         &-link {
-            color: $black; //change to white
+            color: $white;
             text-decoration: none;
+            transition: $transition-default;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 0%;
+                height: 1px;
+                bottom: -10px;
+                background-color: transparent;
+                transition: $transition-default;
+                transform-origin: left;
+            }
+
+            .header-scroll &,
+            .internal-page &,
+            &.btn-primary {
+                color: $black;
+
+            }
 
             .active & {
                 color: $primary;
+            }
+
+            &:hover,
+            &:focus {
+                color: $dark-green;
+
+                &::before {
+                    background-color: $dark-green;
+                    width: 100%;
+                }
             }
         }
     }
