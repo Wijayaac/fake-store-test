@@ -49,6 +49,17 @@
 
         &-item {
             margin-right: 30px;
+
+            @include mq($until: lg) {
+
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+            }
+
+            @include mq($from: md, $until: lg) {
+                margin-right: 10px;
+            }
         }
     }
 
@@ -95,12 +106,26 @@
         a {
             color: $black;
         }
+
+        &-item {
+            @include mq($until: lg) {
+
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
     }
 
     &__bottom {
         .footer__wrapper-box {
             justify-content: space-between;
             align-items: flex-end;
+
+            @include mq($until: md) {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
         }
 
         &-item {
@@ -127,6 +152,12 @@
                     margin-right: 8px;
                 }
             }
+
+            @include mq($until: lg) {
+                &:not(:first-child) {
+                    margin-bottom: 12px;
+                }
+            }
         }
     }
 
@@ -138,5 +169,9 @@
 
     a {
         text-decoration: none;
+
+        &:hover {
+            color: $primary;
+        }
     }
 }

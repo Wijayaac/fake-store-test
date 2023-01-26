@@ -5,9 +5,11 @@
 @import 'utils/variables';
 @import 'fonts/Montserrat/stylesheet.css';
 @import 'fonts/Icon/style.css';
+@import 'utils/mixins';
 
 // vendors
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
+@import '/node_modules/swiper/swiper-bundle.css';
 @import 'vendor/mq';
 
 // Reboot
@@ -84,6 +86,7 @@
     align-items: center;
     color: $dark-green;
     padding-left: 0;
+    text-align: left;
 
     &::after {
         content: "\e90b";
@@ -104,13 +107,23 @@
 }
 
 .subheading {
-    font-size: 22px;
+    font-size: 18px;
+
+    @include mq($from: lg) {
+        font-size: 22px;
+    }
+
 }
 
 .subtitle {
     font-size: 14px;
     color: $grey;
     margin-bottom: 4px;
+    text-transform: uppercase;
+
+    @include mq($until: lg) {
+        font-size: 12px;
+    }
 }
 
 h1,
@@ -172,7 +185,7 @@ h3 {
     img {
         border-radius: 32px;
         max-width: 100%;
-        height: auto;
+        height: 100%;
     }
 }
 
@@ -182,5 +195,10 @@ h3 {
 
     &--tight {
         padding-top: 0;
+    }
+
+    @include mq($until: lg) {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }

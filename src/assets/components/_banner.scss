@@ -1,6 +1,12 @@
 .banner {
     &--normal {
         background-color: #eafbed;
+
+        @include mq($until: lg) {
+            .subheading {
+                margin-bottom: 30px;
+            }
+        }
     }
 
     &--plain {
@@ -21,6 +27,10 @@
         color: $white;
         min-height: 700px;
         height: 88vh;
+
+        @include mq($until: lg) {
+            height: calc(100vh - 70px);
+        }
 
         .container {
             height: 100%;
@@ -51,8 +61,47 @@
                 align-items: center;
             }
         }
+
+        @include mq($until: md) {
+            .product-page & {
+                .row {
+                    flex-direction: column-reverse;
+
+                    .subtitle {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
     }
 
+    &__image {
+        position: relative;
+        padding-top: 100%;
+
+        img {
+            @include img-ratio()
+        }
+
+        .product-page & {
+            padding-top: 110%;
+        }
+
+        .banner--home & {
+            padding-top: 150%;
+        }
+
+        @include mq($until: lg) {
+            .product-page & {
+                padding-top: 90%;
+            }
+
+            .banner--home & {
+                padding-top: 75%;
+            }
+
+        }
+    }
 
     &__button {
         .banner--home & {

@@ -1,9 +1,113 @@
 .review-slider {
+    overflow: hidden;
+
+    &__wrapper {
+        position: relative;
+    }
+
+    .swiper {
+        overflow: visible;
+
+        &-slide {
+            transition: $transition-default;
+
+            &-prev,
+            & {
+                opacity: 0.3;
+            }
+
+            &-active,
+            &-next {
+                opacity: 1;
+            }
+
+            @include mq($until: md) {
+                & {
+                    opacity: 0.3;
+                }
+
+                &-active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: -60px;
+        right: 0;
+        z-index: 10;
+
+        @include mq($until: lg) {
+            top: -40px;
+        }
+    }
+
+    &__navigation {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &>div {
+            position: static;
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
+            border: 2px solid $dark-green;
+            transition: $transition-default;
+
+            @include mq($until: lg) {
+                width: 40px;
+                height: 40px;
+            }
+
+            &:hover {
+                background-color: $dark-green;
+
+                i {
+                    color: $primary;
+                }
+            }
+
+            &:first-child {
+                margin-right: 20px;
+
+                @include mq($until: lg) {
+                    margin-right: 10px;
+                }
+            }
+
+            &::after {
+                content: none;
+            }
+
+            i {
+                font-size: 40px;
+                transition: $transition-default;
+                color: $dark-green;
+
+                @include mq($until: lg) {
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+
     &__header {
         margin-bottom: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        @include mq($until: lg) {
+            padding-right: 80px;
+            margin-bottom: 24px;
+        }
     }
 
     &__item {

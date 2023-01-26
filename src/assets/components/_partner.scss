@@ -1,9 +1,16 @@
 .partner {
-    background-color: $dark-green;
+    background-color: $light-green;
 
     &__wrapper {
         .row {
             justify-content: center;
+        }
+
+        .swiper {
+            &-wrapper {
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 
@@ -13,21 +20,20 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 40px;
-        color: $white;
-
-        .subtitle {
-            color: $white;
-        }
     }
 
     &__logo {
         text-align: center;
         margin-bottom: 24px;
 
-        img {
-            width: 60px;
+        svg {
+            width: 100px;
+            height: auto;
             object-fit: contain;
-            filter: grayscale(0.5);
+
+            @include mq($until: lg) {
+                width: 80px;
+            }
         }
     }
 }

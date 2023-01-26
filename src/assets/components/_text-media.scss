@@ -10,6 +10,42 @@
                     margin-bottom: 40px;
                 }
             }
+
+            @include mq($until: md) {
+                .text-media--left & {
+                    flex-direction: column-reverse;
+                }
+            }
+
+        }
+
+        @include mq($until: lg) {
+            .subheading {
+                margin-bottom: 24px;
+            }
+
+        }
+
+        .swiper {
+            &-wrapper {
+                align-items: center;
+            }
+        }
+    }
+
+
+    &__description {
+        @include mq($until: lg) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__image {
+        position: relative;
+        padding-top: 70%;
+
+        img {
+            @include img-ratio()
         }
     }
 }

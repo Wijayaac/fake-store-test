@@ -1,6 +1,10 @@
 .product {
     &__item {
         margin-bottom: 48px;
+
+        @include mq($until: lg) {
+            margin-bottom: 24px;
+        }
     }
 
     &__rating {
@@ -27,11 +31,20 @@
                 &:not(:last-child) {
                     margin-right: 4px;
                 }
+
+                @include mq($until: lg) {
+                    width: 38px;
+                    height: 38px;
+                }
             }
 
             i {
                 color: $white;
                 font-size: 40px;
+
+                @include mq($until: lg) {
+                    font-size: 32px;
+                }
             }
         }
     }

@@ -1,0 +1,1 @@
+export const PRODUCT_EVENT = "GET_PRODUCT_ITEM";
