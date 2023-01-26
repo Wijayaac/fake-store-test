@@ -48,6 +48,14 @@
                 border-radius: 12px;
                 transition: border-color $transition-effect-cubic;
             }
+
+            @include mq($until: lg) {
+                margin-bottom: 24px;
+
+                .form-label {
+                    margin-bottom: 12px;
+                }
+            }
         }
 
         &-submit {

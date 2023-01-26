@@ -1,6 +1,12 @@
 .banner {
     &--normal {
         background-color: #eafbed;
+
+        @include mq($until: lg) {
+            .subheading {
+                margin-bottom: 30px;
+            }
+        }
     }
 
     &--plain {
@@ -21,6 +27,11 @@
         color: $white;
         min-height: 700px;
         height: 88vh;
+
+        @include mq($until: lg) {
+            height: calc(100vh - 70px);
+            min-height: 600px;
+        }
 
         .container {
             height: 100%;
@@ -49,6 +60,18 @@
 
             .row {
                 align-items: center;
+            }
+        }
+
+        @include mq($until: lg) {
+            .product-page & {
+                .row {
+                    flex-direction: column-reverse;
+
+                    .subtitle {
+                        margin-bottom: 24px;
+                    }
+                }
             }
         }
     }

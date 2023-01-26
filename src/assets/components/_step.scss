@@ -18,6 +18,10 @@
 
     h2 {
         margin-bottom: 24px;
+
+        @include mq($until: lg) {
+            margin-bottom: 16px;
+        }
     }
 
     &__image {
@@ -27,6 +31,10 @@
     &__wrapper {
         position: relative;
         overflow: hidden;
+
+        @include mq($until: lg) {
+            margin-top: 24px;
+        }
     }
 
     &__bar {
@@ -35,10 +43,6 @@
         width: 10px;
         left: 28px;
         top: var(--top);
-
-        @include mq($until: lg) {
-            left: 32px;
-        }
 
         &--current {
             position: absolute;
@@ -55,14 +59,26 @@
             opacity: 0.2;
             display: block;
         }
+
+        @include mq($until: lg) {
+            left: 26px;
+
+            &--rails,
+            &--current {
+                width: 4px;
+            }
+        }
     }
 
     &__item {
-
         display: flex;
         padding-bottom: 48px;
         position: relative;
         z-index: 2;
+
+        @include mq($until: lg) {
+            padding-bottom: 32px;
+        }
 
         &:last-child {
             background-color: $light-green;
@@ -89,6 +105,10 @@
             position: relative;
             z-index: 2;
             transition: $transition-default;
+
+            @include mq($until: lg) {
+                margin-right: 24px;
+            }
 
             span {
                 color: $dark-green;

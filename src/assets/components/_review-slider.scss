@@ -20,14 +20,28 @@
             &-next {
                 opacity: 1;
             }
+
+            @include mq($until: lg) {
+                & {
+                    opacity: 0.3;
+                }
+
+                &-active {
+                    opacity: 1;
+                }
+            }
         }
     }
 
     &__button {
         position: absolute;
-        top: -20%;
+        top: -60px;
         right: 0;
         z-index: 10;
+
+        @include mq($until: lg) {
+            top: -40px;
+        }
     }
 
     &__navigation {
@@ -43,6 +57,11 @@
             border: 2px solid $dark-green;
             transition: $transition-default;
 
+            @include mq($until: lg) {
+                width: 40px;
+                height: 40px;
+            }
+
             &:hover {
                 background-color: $dark-green;
 
@@ -53,6 +72,10 @@
 
             &:first-child {
                 margin-right: 20px;
+
+                @include mq($until: lg) {
+                    margin-right: 10px;
+                }
             }
 
             &::after {
@@ -63,6 +86,10 @@
                 font-size: 40px;
                 transition: $transition-default;
                 color: $dark-green;
+
+                @include mq($until: lg) {
+                    font-size: 34px;
+                }
             }
         }
     }
@@ -72,6 +99,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        @include mq($until: lg) {
+            padding-right: 80px;
+            margin-bottom: 24px;
+        }
     }
 
     &__item {

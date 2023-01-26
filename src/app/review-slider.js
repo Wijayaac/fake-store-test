@@ -15,12 +15,19 @@ const ReviewSlider = {
     const swiperTarget = ReviewSlider.sliderElms[key].querySelector(".swiper");
 
     const swiperELm = new Swiper(swiperTarget, {
-      slidesPerView: 2,
-      spaceBetween: 40,
-      slidesPerGroup: 2,
+      slidesPerView: 1.1,
+      spaceBetween: 20,
+      slidesPerGroup: 1,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 40,
+        },
       },
     });
   },

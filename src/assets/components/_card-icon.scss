@@ -13,6 +13,12 @@
                     padding-left: 30px;
                     padding-right: 30px;
                 }
+
+                @include mq($until: lg) {
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+                }
             }
         }
     }
@@ -23,6 +29,10 @@
         i {
             font-size: 48px;
             color: $dark-green;
+        }
+
+        @include mq($until: lg) {
+            margin-bottom: 18px;
         }
     }
 
@@ -36,7 +46,15 @@
 
         .subtitle {
             margin-bottom: 20px;
-            text-transform: uppercase;
+        }
+
+        @include mq($until: lg) {
+            padding: 24px;
+            border-radius: 24px;
+
+            .subtitle {
+                margin-bottom: 12px;
+            }
         }
     }
 

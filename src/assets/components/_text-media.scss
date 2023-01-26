@@ -10,6 +10,28 @@
                     margin-bottom: 40px;
                 }
             }
+
+            @include mq($until: lg) {
+                .text-media--left & {
+                    @include mq($until: lg) {
+                        flex-direction: column-reverse;
+                    }
+                }
+            }
+
+        }
+
+        @include mq($until: lg) {
+            .subheading {
+                margin-bottom: 24px;
+            }
+
+        }
+    }
+
+    &__description {
+        @include mq($until: lg) {
+            margin-bottom: 24px;
         }
     }
 }

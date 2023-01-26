@@ -6,6 +6,10 @@
     box-shadow: 2px 6px 35px 10px rgb(24 24 27 / 9%);
     border: none;
 
+    @include mq($until: lg) {
+        border-radius: 24px;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -16,6 +20,10 @@
         padding-top: 80.75%;
         overflow: hidden;
         background-color: $light-green;
+
+        @include mq($until: lg) {
+            padding-top: 65%;
+        }
 
         img {
             position: absolute;

@@ -5,6 +5,16 @@
         .row {
             justify-content: center;
         }
+
+        .swiper {
+            &-wrapper {
+                justify-content: center;
+
+                @include mq($until: lg) {
+                    // justify-content: flex-start;
+                }
+            }
+        }
     }
 
     &__header {
