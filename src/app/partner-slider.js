@@ -17,6 +17,7 @@ const PartnerSlider = {
       PartnerSlider.partnerWrapper[index].querySelector(".swiper");
     const swiperElm = new Swiper(targetSwiper, {
       slidesPerView: 3,
+      spaceBetween: 20,
       freeMode: {
         enabled: true,
         sticky: true,
@@ -30,6 +31,7 @@ const PartnerSlider = {
       },
       breakpoints: {
         768: {
+          spaceBetween: 0,
           slidesPerView: 6,
         },
       },

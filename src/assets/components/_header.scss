@@ -93,15 +93,17 @@
             transition: $transition-default;
             position: relative;
 
-            &::before {
-                content: "";
-                position: absolute;
-                width: 0%;
-                height: 1px;
-                bottom: -10px;
-                background-color: transparent;
-                transition: $transition-default;
-                transform-origin: left;
+            &:not(.btn-primary) {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 0%;
+                    height: 1px;
+                    bottom: -10px;
+                    background-color: transparent;
+                    transition: $transition-default;
+                    transform-origin: left;
+                }
             }
 
             .header-scroll &,
