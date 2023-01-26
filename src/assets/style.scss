@@ -79,6 +79,13 @@
 .btn-secondary {
     border-color: $dark-green;
     color: $dark-green;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $dark-green;
+        color: $white;
+    }
 }
 
 .btn-arrow {
