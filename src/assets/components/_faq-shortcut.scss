@@ -6,6 +6,12 @@
 
     &__image {
         margin-bottom: 24px;
+        position: relative;
+        padding-top: 65.2%;
+
+        img {
+            @include img-ratio()
+        }
     }
 
     &__lists {

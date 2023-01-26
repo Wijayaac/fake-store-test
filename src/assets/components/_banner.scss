@@ -30,7 +30,6 @@
 
         @include mq($until: lg) {
             height: calc(100vh - 70px);
-            min-height: 600px;
         }
 
         .container {
@@ -63,7 +62,7 @@
             }
         }
 
-        @include mq($until: lg) {
+        @include mq($until: md) {
             .product-page & {
                 .row {
                     flex-direction: column-reverse;
@@ -76,6 +75,33 @@
         }
     }
 
+    &__image {
+        position: relative;
+        padding-top: 100%;
+
+        img {
+            @include img-ratio()
+        }
+
+        .product-page & {
+            padding-top: 110%;
+        }
+
+        .banner--home & {
+            padding-top: 150%;
+        }
+
+        @include mq($until: lg) {
+            .product-page & {
+                padding-top: 90%;
+            }
+
+            .banner--home & {
+                padding-top: 75%;
+            }
+
+        }
+    }
 
     &__button {
         .banner--home & {

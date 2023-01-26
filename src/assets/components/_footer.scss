@@ -56,6 +56,10 @@
                     margin-bottom: 24px;
                 }
             }
+
+            @include mq($from: md, $until: lg) {
+                margin-right: 10px;
+            }
         }
     }
 
@@ -118,7 +122,7 @@
             justify-content: space-between;
             align-items: flex-end;
 
-            @include mq($until: lg) {
+            @include mq($until: md) {
                 flex-direction: column-reverse;
                 text-align: center;
             }

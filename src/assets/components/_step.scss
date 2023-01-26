@@ -141,6 +141,15 @@
         }
     }
 
+    &__image {
+        position: relative;
+        padding-top: 75%;
+
+        img {
+            @include img-ratio();
+        }
+    }
+
     &__button {
         .btn-lead {
             margin-right: 20px;
