@@ -7,6 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Uh oh! We think you're lost</title>
     <link rel="stylesheet" href="./assets/style.scss">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body class="error internal-page">
@@ -55,12 +64,12 @@
     <main class="page-wrap">
         <section class="section section--tight error-page">
             <div class="container">
-                <div class="error-page__wrapper">
+                <div class="error-page__wrapper" data-sal="fade" data-sal-delay="300" data-sal-duration="500" data-sal-easing="ease-out-back">
                     <picture>
                         <img src="./img/404-error.svg" alt="404 error">
                     </picture>
                 </div>
-                <a href="/" class="btn btn-primary">Go Back</a>
+                <a href="/" class="btn btn-primary" data-sal="fade" data-sal-delay="800" data-sal-duration="500" data-sal-easing="ease-out-back">Go Back</a>
             </div>
         </section>
     </main>

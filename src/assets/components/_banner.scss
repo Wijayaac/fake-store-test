@@ -25,10 +25,11 @@
     &--home {
         background-color: $dark-green;
         color: $white;
-        min-height: 700px;
         height: 88vh;
+        min-height: 900px;
 
         @include mq($until: lg) {
+            min-height: 700px;
             height: calc(100vh - 70px);
         }
 
@@ -88,7 +89,7 @@
         }
 
         .banner--home & {
-            padding-top: 150%;
+            padding-top: 120%;
         }
 
         @include mq($until: lg) {

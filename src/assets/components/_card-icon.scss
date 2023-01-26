@@ -8,7 +8,7 @@
                 margin-right: -30px;
             }
 
-            .col-md-3 {
+            .col {
                 @include mq($from: xl) {
                     padding-left: 30px;
                     padding-right: 30px;
